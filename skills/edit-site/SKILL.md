@@ -1,5 +1,5 @@
 ---
-name: naru-site
+name: edit-site
 description: Work on a website hosted on Naru (a site at <name>.naru.pub or the owner's custom domain) through the Naru connector. Use when the user wants to see, create, edit, restyle, reorganize or add pages to their Naru site, or add a guestbook, comments, polls, sign-up forms, a blog or other saved data to it.
 ---
 

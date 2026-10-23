@@ -12,7 +12,7 @@ saved with the Naru Data SDK.
   the account you connect: `get_site`, `list_files` and `read_file` to read, and
   `write_file`, `move_file` and `delete_file` to change files. Changes are
   published as soon as they are made.
-- **`naru-site` skill**: how Naru sites work, how to change files without losing
+- **`edit-site` skill**: how Naru sites work, how to change files without losing
   what's already there, and how to store data with the Naru Data SDK and
   `_naru/collections.json`.
 
