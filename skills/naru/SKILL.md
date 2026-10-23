@@ -1,5 +1,5 @@
 ---
-name: edit-site
+name: naru
 description: Work on a website hosted on Naru (a site at <name>.naru.pub or the owner's custom domain) through the Naru connector. Use when the user wants to see, create, edit, restyle, reorganize or add pages to their Naru site, or add a guestbook, comments, polls, sign-up forms, a blog or other saved data to it.
 ---
 
@@ -7,8 +7,7 @@ description: Work on a website hosted on Naru (a site at <name>.naru.pub or the 
 
 Naru hosts personal websites. The Naru connector reaches one site: the one
 owned by the account the user connected. Every file is published as it is at
-`<site address>/<path>` the moment it is written. There is no build step, no
-server-side code, and no draft or staging copy.
+`<site address>/<path>` the moment it is written. There is no build step or draft/staging copy for ordinary static files.
 
 ## Before changing anything
 
@@ -49,7 +48,8 @@ who may read and write them, and the owner's sign-in.
 
 ## What Naru can't do
 
-There is no server-side code, scheduled job, email or SMS sending, payment
-processing, or place to keep a secret key for another service. When the user
+This plugin manages site files and uses the browser Data SDK described in its
+reference. It does not provide tools for scheduled jobs, email or SMS sending,
+payment processing, or third-party secret storage. When the user
 asks for one of these, say so before building, and suggest what a static page
 with the Data SDK can do instead.

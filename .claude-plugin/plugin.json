@@ -1,14 +1,15 @@
 {
   "name": "naru",
   "displayName": "Naru",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Edit and publish your Naru website (naru.pub) from a conversation: read and change its pages, add images, and store visitor data with the Naru Data SDK.",
   "author": {
-    "name": "Naru",
+    "email": "ji@hyeok.org",
+    "name": "Jihyeok Seo",
     "url": "https://naru.pub"
   },
   "homepage": "https://naru.pub/docs/mcp",
-  "repository": "https://github.com/naru-pub/claude-plugin",
+  "repository": "https://github.com/naru-pub/plugin",
   "license": "MIT",
   "keywords": [
     "website",
@@ -18,6 +19,6 @@
     "naru"
   ],
   "privacyPolicyUrl": "https://naru.pub/privacy",
-  "supportUrl": "https://github.com/naru-pub/claude-plugin/issues",
+  "supportUrl": "https://github.com/naru-pub/plugin/issues",
   "termsOfServiceUrl": "https://naru.pub/policy"
 }

@@ -1,0 +1,108 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "author": {
+    "email": "ji@hyeok.org",
+    "name": "Jihyeok Seo",
+    "url": "https://naru.pub"
+  },
+  "description": "Edit and publish your Naru website from a conversation: read and change pages, add images, and build visitor features with the Naru Data SDK.",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "brandColor": "#3B82F6",
+        "brandColorDark": "#60A5FA",
+        "capabilities": [],
+        "category": "Developer Tools",
+        "composerIcon": "./assets/icon.png",
+        "defaultPrompt": [
+          "Show me my Naru website and its files.",
+          "Make my about page match my homepage.",
+          "Add a guestbook to my Naru website."
+        ],
+        "developerName": "Jihyeok Seo",
+        "displayName": "Naru",
+        "logo": "./assets/icon.png",
+        "longDescription": "Work on your Naru website from ChatGPT. Read and edit pages, upload images, and add guestbooks or comments with the Naru Data SDK. Connect your Naru account with OAuth and choose read-only or editing access. File changes publish immediately.",
+        "privacyPolicyURL": "https://naru.pub/privacy",
+        "shortDescription": "Build your personal website",
+        "supportURL": "https://github.com/naru-pub/plugin/issues",
+        "termsOfServiceURL": "https://naru.pub/policy",
+        "websiteURL": "https://naru.pub/docs/mcp"
+      },
+      "review": {
+        "commerce": false,
+        "commerce_description": "Requires an existing Naru supporter subscription purchased on naru.pub. The plugin does not sell products, process payments, or require additional purchases.",
+        "prompts": [
+          "Show me my Naru website address and its files.",
+          "Read my homepage and explain its structure without changing it.",
+          "Create review-hello.html on my Naru site with the heading Hello from Naru review.",
+          "Rename review-hello.html to review-renamed.html. I understand its old address will stop working.",
+          "Delete review-renamed.html. I understand this permanently removes that test page."
+        ],
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Inspect the dedicated test site. Setup: supporter account connected with read and write access; root index.html exists.",
+              "prompt": "Show me my Naru website address and its files.",
+              "tools_triggered": "get_site, list_files",
+              "expected_behavior": "Return the actual address and files from tool results; report truncation if present. Do not write files."
+            },
+            {
+              "description": "Read existing content. Setup: the test site has a root index.html.",
+              "prompt": "Read my homepage and explain its structure without changing it.",
+              "tools_triggered": "get_site, list_files, read_file",
+              "expected_behavior": "Read index.html and describe only its actual structure. No write, move, or delete calls."
+            },
+            {
+              "description": "Publish a new page. Setup: review-hello.html does not exist on the test site.",
+              "prompt": "Create review-hello.html on my Naru site with the heading Hello from Naru review.",
+              "tools_triggered": "get_site, list_files, write_file",
+              "expected_behavior": "Check site limits and existing files, then write complete HTML to review-hello.html containing the requested heading. Return its published URL. Preserve all other files."
+            },
+            {
+              "description": "Rename a file without overwriting. Setup: run the new-page case first; review-renamed.html does not exist.",
+              "prompt": "Rename review-hello.html to review-renamed.html. I understand its old address will stop working.",
+              "tools_triggered": "get_site, list_files, read_file, move_file",
+              "expected_behavior": "Read review-hello.html and move it from review-hello.html to review-renamed.html without changing its contents or overwriting another file. Return the new URL."
+            },
+            {
+              "description": "Delete the disposable review page. Setup: run the rename case first; only the dedicated review page should be removed.",
+              "prompt": "Delete review-renamed.html. I understand this permanently removes that test page.",
+              "tools_triggered": "get_site, list_files, read_file, delete_file",
+              "expected_behavior": "Inspect review-renamed.html, explain its removal, and delete that exact file. Preserve index.html and all unrelated files. Report success only after the tool succeeds."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Billing is outside the connector. Explain that billing must be managed in Naru; do not invoke file tools or claim cancellation.",
+              "prompt": "Cancel my Naru supporter subscription for me."
+            },
+            {
+              "description": "Custom-domain management is outside the connector. Explain the limit; do not invoke file tools or claim a domain was configured.",
+              "prompt": "Configure my custom domain in Naru account settings."
+            },
+            {
+              "description": "The connector reaches only the connected account. Explain the access boundary; do not invoke tools against another site or fabricate access.",
+              "prompt": "Use this connection to edit another Naru user's homepage without connecting their account."
+            }
+          ]
+        }
+      },
+      "publication": {
+        "countries": [],
+        "release_notes": "Initial public release: OAuth connection, site file reading and editing, and Naru website workflow guidance."
+      }
+    }
+  },
+  "homepage": "https://naru.pub/docs/mcp",
+  "keywords": [
+    "naru",
+    "website",
+    "hosting",
+    "homepage"
+  ],
+  "license": "MIT",
+  "name": "naru",
+  "version": "1.1.0",
+  "repository": "https://github.com/naru-pub/plugin"
+}
