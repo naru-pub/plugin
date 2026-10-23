@@ -17,5 +17,7 @@
     "static site",
     "naru"
   ],
-  "privacyPolicyUrl": "https://naru.pub/privacy"
+  "privacyPolicyUrl": "https://naru.pub/privacy",
+  "supportUrl": "https://github.com/naru-pub/claude-plugin/issues",
+  "termsOfServiceUrl": "https://naru.pub/policy"
 }
