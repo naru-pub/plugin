@@ -25,8 +25,8 @@ saved with the Naru Data SDK.
    page match the style of the home page".
 
 The connector needs the Naru supporter plan. You can see and disconnect
-connected apps at any time on https://naru.pub/account. More:
-https://naru.pub/docs/mcp.
+connected apps at any time on your [Naru account page](https://naru.pub/account).
+More in [Naru's MCP guide](https://naru.pub/docs/mcp).
 
 ## Data
 
@@ -35,8 +35,7 @@ connector, Claude sends naru.pub the file paths and file contents it reads and
 writes on your site, and nothing else. Naru keeps your site's files, a record
 of each connection (the app's name, when it was connected and last used), and
 hashes of its tokens until you disconnect. Naru doesn't receive your
-conversations with Claude. See Naru's privacy policy at
-https://naru.pub/privacy.
+conversations with Claude. See [Naru's privacy policy](https://naru.pub/privacy).
 
 ## License
 

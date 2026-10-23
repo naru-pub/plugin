@@ -3,9 +3,19 @@
   "displayName": "Naru",
   "version": "1.0.0",
   "description": "Edit and publish your Naru website (naru.pub) from a conversation: read and change its pages, add images, and store visitor data with the Naru Data SDK.",
-  "author": { "name": "Naru", "url": "https://naru.pub" },
+  "author": {
+    "name": "Naru",
+    "url": "https://naru.pub"
+  },
   "homepage": "https://naru.pub/docs/mcp",
   "repository": "https://github.com/naru-pub/claude-plugin",
   "license": "MIT",
-  "keywords": ["website", "homepage", "hosting", "static site", "naru"]
+  "keywords": [
+    "website",
+    "homepage",
+    "hosting",
+    "static site",
+    "naru"
+  ],
+  "privacyPolicyUrl": "https://naru.pub/privacy"
 }
