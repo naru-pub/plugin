@@ -1,8 +1,8 @@
 {
   "name": "naru",
   "displayName": "Naru",
-  "version": "1.1.0",
-  "description": "Edit and publish your Naru website (naru.pub) from a conversation: read and change its pages, add images, and store visitor data with the Naru Data SDK.",
+  "version": "1.2.0",
+  "description": "Build and edit your Naru website (naru.pub) from a conversation: change its pages and files, add images, and add a guestbook or blog backed by the site's database.",
   "author": {
     "email": "ji@hyeok.org",
     "name": "Jihyeok Seo",

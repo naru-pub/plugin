@@ -26,5 +26,8 @@ The privacy-policy automated assessment previously failed without a specific
 policy defect; additional review remains available. This repository does not
 claim that public submission or approval is complete.
 
-Run python3 scripts/package.py and upload dist/naru-chatgpt-1.1.0.zip as the
+The review cases cover the file tools only, not the collection and document
+tools the server now also offers.
+
+Run python3 scripts/package.py and upload dist/naru-chatgpt-1.2.0.zip as the
 next draft. Uploading, submitting for review, and publishing are separate steps.

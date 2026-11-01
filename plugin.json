@@ -5,7 +5,7 @@
     "name": "Jihyeok Seo",
     "url": "https://naru.pub"
   },
-  "description": "Edit and publish your Naru website from a conversation: read and change pages, add images, and build visitor features with the Naru Data SDK.",
+  "description": "Build and edit your Naru website from a conversation: change its pages and files, add images, and add a guestbook or blog backed by the site's database.",
   "extensions": {
     "com.openai": {
       "interface": {
@@ -22,7 +22,7 @@
         "developerName": "Jihyeok Seo",
         "displayName": "Naru",
         "logo": "./assets/icon.png",
-        "longDescription": "Work on your Naru website from ChatGPT. Read and edit pages, upload images, and add guestbooks or comments with the Naru Data SDK. Connect your Naru account with OAuth and choose read-only or editing access. File changes publish immediately.",
+        "longDescription": "Work on your Naru website from ChatGPT. Read and edit pages, upload images, and add guestbooks, blogs or comments backed by your site's database with the Naru Data SDK. Connect your Naru account with OAuth and choose read-only or editing access; database documents, which can hold what your visitors wrote, are a separate permission. File changes publish immediately.",
         "privacyPolicyURL": "https://naru.pub/privacy",
         "shortDescription": "Build your personal website",
         "supportURL": "https://github.com/naru-pub/plugin/issues",
@@ -103,6 +103,6 @@
   ],
   "license": "MIT",
   "name": "naru",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "repository": "https://github.com/naru-pub/plugin"
 }
