@@ -29,5 +29,5 @@ claim that public submission or approval is complete.
 The review cases cover the file tools only, not the collection and document
 tools the server now also offers.
 
-Run python3 scripts/package.py and upload dist/naru-chatgpt-1.2.0.zip as the
+Build the packages as the README describes and upload dist/naru-chatgpt-1.2.0.zip as the
 next draft. Uploading, submitting for review, and publishing are separate steps.

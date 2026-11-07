@@ -43,17 +43,18 @@ The connector needs the Naru supporter plan. You can disconnect apps on your
 ## Repository and packages
 
 - `skills/naru/`: the shared workflow and pinned Data SDK 1.1.0 reference.
-- `assets/icon.png`: shared branding. The identical `.claude-plugin/icon.png`
-  is retained for Claude's icon discovery; the packager checks they match.
+- `assets/`: ChatGPT branding, kept identical to Claude's plugin icon.
 - `plugin.json` and `mcp.json`: ChatGPT/Codex portable metadata, OAuth, and
   public review cases. The root manifest is the authoritative ChatGPT source.
 - `.claude-plugin/plugin.json` and `.mcp.json`: Claude configuration.
 - `docs/chatgpt-submission.md`: review status and remaining submission steps.
 
-Build both self-contained packages with Python 3 (no extra dependencies):
+Build both self-contained packages from the committed tree with `git archive`:
 
 ```sh
-python3 scripts/package.py
+v=$(sed -n 's/.*"version": "\(.*\)".*/\1/p' plugin.json); mkdir -p dist
+git archive --prefix=naru/ -o dist/naru-chatgpt-$v.zip HEAD LICENSE README.md skills assets plugin.json mcp.json
+git archive --prefix=naru/ -o dist/naru-claude-$v.zip HEAD LICENSE README.md skills .claude-plugin .mcp.json
 ```
 
 Outputs are `dist/naru-chatgpt-<version>.zip` and
